@@ -2,10 +2,31 @@
     position: absolute;
     top: 0;
     left: 0;
-    height: 60px;
-    width: 80px;
+    width: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: gray;
+    background-color: white;
+    box-shadow: 2px 2px 4px gray;
+}
+
+.sidebar-links{
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.sidebar-links a{
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+}
+
+.sidebar-links a:visited{
+    color: black;
+}
+
+.sidebar-links>a:not(:last-child){
+    border-bottom: solid 1px lightgray;
 }
