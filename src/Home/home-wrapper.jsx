@@ -1,10 +1,11 @@
 import React from 'react';
-import './main.css'
+import HomeContent from './home-content';
+import './home.css';
 
-export default function Main(props){
+export default function HomeWrapper(props){
     return(
         <div className="home-wrapper">
-            <h2>Main section</h2>
+            <HomeContent></HomeContent>
         </div>
     )
 }

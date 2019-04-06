@@ -1,19 +1,24 @@
 import React, { Component } from 'react';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import './App.css';
-import Main from '../MainContent/main';
+import HomeWrapper from '../Home/home-wrapper';
 import TopNav from '../TopNav/top-nav';
 import SideNav from '../SideNav/side-nav';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <SideNav></SideNav>
-        <main>
+      <Router>
+        <div className="App">
+          <SideNav></SideNav>
           <TopNav></TopNav>
-          <Main></Main>
-        </main>
-      </div>
+          <main>
+            <Switch>
+              <Route exact path='/' component={HomeWrapper} />
+            </Switch>
+          </main>
+        </div>
+      </Router>
     );
   }
 }

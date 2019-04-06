@@ -1,6 +1,28 @@
-.main-wrapper{
-    display: flex;
+.home-wrapper{
     height: calc(100vh - 60px);
-    justify-content: center;
+
+}
+
+.home-content{
+    height: 100%;
+    width: 100%;
+    background-color: lightblue;
     align-items: center;
+    padding: 20px;
+}
+
+.testimonial{
+    margin-top: 40%;
+}
+
+.author{
+    margin-top: 8px;
+    text-align: right;
+}
+
+@media only screen and (min-width: 1000){
+    .testimonial{
+        width: 50%;
+        margin: 0 auto;
+    }
 }
