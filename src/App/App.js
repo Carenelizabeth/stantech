@@ -7,13 +7,27 @@ import TopNav from '../TopNav/top-nav';
 import SideNav from '../SideNav/side-nav';
 
 class App extends Component {
+  constructor(){
+    super()
+    this.state = {
+      sideBar: true,
+    }
+  }
+
+  toggleMenu = () => {
+    console.log('click');
+    this.setState({
+      sideBar: !this.state.sideBar
+    })
+  }
+
   render() {
     return (
       <Router>
         <div className="App">
-          <SideNav></SideNav>
-          <TopNav></TopNav>
+          <TopNav onClick={this.toggleMenu}></TopNav>
           <main>
+            <SideNav visible={this.state.sideBar}></SideNav>
             <Switch>
               <Route exact path='/' component={HomeWrapper} />
               <Route path='/form' component={Forms} />
